@@ -426,6 +426,12 @@ public class MainActivity extends Activity {
             c.drawBitmap(b,null,d,p);
         }
 
+        void drawKey(Canvas c,float x,float y,String label){
+            round(c,x-52,y-52,x+52,y+52,52,0xff26343b);
+            stroke(c,x-52,y-52,x+52,y+52,52,0xff70838b,3);
+            text(c,label,x,y+14,34,Color.WHITE,true,Layout.Alignment.ALIGN_CENTER,100);
+        }
+
         @Override public boolean onTouchEvent(MotionEvent e){
             float x=LX(e.getX()), y=LY(e.getY());
             if(e.getActionMasked()==MotionEvent.ACTION_DOWN){
